@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+
+    <title>Bank DashBoard</title>
+</head>
+
+<body id="main-id">
+
+    <main  style="max-width: 1100px; margin: 0.5rem auto;"
+        class="flex flex-col gap-y-5 h-auto md:h-screen justify-center p-2">
+
+        <header class="mx-auto space-y-5">
+
+            <span id="day-night" class="text-black font-semibold border p-3 border-emerald-300">Night Mode</span>
+            
+            <h1 id="title-bap"
+                class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black md:text-5xl lg:text-6xl dark:text-white">
+                Your <mark class="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">Baper</mark> Bank
+            </h1>
+            <p id="description" class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+                Baper Bank theke taka tulte mojae alada
+            </p>
+
+            <section class="money-display mt-20 grid grid-cols-1 md:grid-cols-3 gap-y-5 md:gap-5 ">
+                <div id="deposit"
+                    class=" pr-36 block max-w-sm p-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-green-400 hover:to-blue-500   rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white ">Deposit</h5>
+                    <h1 id="" class="font-semibol text-2xl text-white dark:text-gray-400">$<span
+                            id="deposit-display">00 </span></h1>
+                </div>
+
+                <div id="withdraw"
+                    class="pr-36 block max-w-sm p-6  bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500  rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Withdraw</h5>
+                    <h1 id="" class="font-semibold text-2xl text-white dark:text-gray-400">$ <span
+                            id="withdraw-display">00</span> </h1>
+                </div>
+
+                <div id=""
+                    class="pr-36 block max-w-sm p-6 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-400 hover:to-blue-500  rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Balance</h5>
+                    <h1 id="" class="font-semibold text-2xl text-white dark:text-gray-400">$<span
+                            id="balance-display">2300 </span></h1>
+                </div>
+            </section>
+
+            <section class=" grid grid-cols-1 md:grid-cols-2 gap-5  w-full">
+
+
+                <div
+                    class=" p-6 bg-gradient-to-r from-green-400 to-blue-500   rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+                    <div>
+                        <h5 class="mb-2 text-xl font-bold tracking-tight text-white dark:text-white">Please Deposit
+                        </h5>
+                    </div>
+                    <div class="mb-3">
+
+                        <input type="text" id="deposit-input"
+                            class="bg-gray-50  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
+                            placeholder="$The amoung you want to deposit">
+                    </div>
+
+                    <div id="depositBtn"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-800 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer">
+                        Deposit</div>
+                </div>
+
+                <div
+                    class=" p-6 bg-gradient-to-r from-pink-500 to-pink-500  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 content-end  ">
+                    <div>
+                        <h5 class="mb-2 text-xl font-bold tracking-tight text-white dark:text-white">Please Withdraw
+
+                        </h5>
+                    </div>
+                    <div class="mb-3">
+
+                        <input type="text" id="withdraw-input"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="$The amoung you want to Withdraw">
+                    </div>
+
+                    <div id="withdrawBtn"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-800 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-pointer">
+                        Withdraw</div>
+
+
+                </div>
+
+
+
+
+            </section>
+
+        </header>
+
+    </main>
+
+    <script type="module" src="dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+
+
+</body>
+
+</html>
